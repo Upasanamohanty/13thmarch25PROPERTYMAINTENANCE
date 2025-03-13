@@ -1,0 +1,46 @@
+import React from 'react';
+
+const RenovationIcon = () => {
+  return (
+    <div style={styles.container}>
+      <img 
+        src="/renovation.png" 
+        alt="Renovation" 
+        style={styles.image} 
+      />
+      <p style={styles.text}>Renovation</p>
+    </div>
+  );
+};
+
+const styles = {
+  container: {
+    width: '310px',
+    height: '286px',
+    position: 'absolute',
+    top: '390px',
+    left: '61px',
+    borderRadius: '10px',
+    background: '#FAF5FC',
+    border: '1px solid #AF5AD0',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: '10px',
+  },
+  image: {
+    width: '100%',
+    borderRadius: '8px',
+  },
+  text: {
+    marginTop: '10px',
+    fontFamily: 'Inter',
+    fontWeight: 500,
+    fontSize: '20px',
+    textAlign: 'center',
+    color: '#000000',
+  },
+};
+
+export default RenovationIcon;
