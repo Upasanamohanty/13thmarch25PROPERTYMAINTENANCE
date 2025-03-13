@@ -1,0 +1,60 @@
+import React from 'react';
+
+const services = [
+  { image: '/electrical-issues.png', label: 'Electrical issues' },
+  { image: '/plumbing.png', label: 'Plumbing' },
+  { image: '/air-conditioning.png', label: 'Air Conditioning' },
+  { image: '/carpentry.png', label: 'Carpentry' },
+  { image: '/painting.png', label: 'Painting' },
+  { image: '/appliance-repair.png', label: 'Appliance Repair' },
+  { image: '/renovation.png', label: 'Renovation' },
+  { image: '/handyman.png', label: 'Handyman' },
+];
+
+const ServicesPage = () => {
+  return (
+    <div style={styles.page}>
+      {services.map((service, index) => (
+        <div key={index} style={styles.container}>
+          <img src={service.image} alt={service.label} style={styles.image} />
+          <p style={styles.text}>{service.label}</p>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+const styles = {
+  page: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(4, 1fr)',
+    gap: '20px',
+    padding: '20px',
+  },
+  container: {
+    width: '310px',
+    height: '286px',
+    borderRadius: '10px',
+    background: '#FAF5FC',
+    border: '1px solid #AF5AD0',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: '10px',
+  },
+  image: {
+    width: '100%',
+    borderRadius: '8px',
+  },
+  text: {
+    marginTop: '10px',
+    fontFamily: 'Inter',
+    fontWeight: 500,
+    fontSize: '20px',
+    textAlign: 'center',
+    color: '#000000',
+  },
+};
+
+export default ServicesPage;
